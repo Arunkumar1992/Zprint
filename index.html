@@ -7,15 +7,20 @@
 
 <h1>This is a Heading</h1>
 <p>This is a paragraph.</p>
-  <button onclick="zprint()">Print</button>
+  <button onclick="zprint()" id="linkid">Print</button>
 
 <script>
   function zprint(){
+    alert("Function Start");
     window.location.href ="app://zprint?key= printed successfully";
-
+alert("Fun End");
   }
 window.location.href ="app://zprint?key= printed successfully";
-  zprint();
+ // zprint();
+  var elem = document.getElementById("linkid");
+if (typeof elem.onclick == "function") {
+    elem.onclick.apply(elem);
+}
 </script>
 </body>
 
